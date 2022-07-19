@@ -1,6 +1,7 @@
 import React from "react";
 import HeaderNavigate from "./components/header/HeaderNavigate";
 import Container from "./components/Container";
+import Header from "./components/header/Header";
 
 
 function App() {
@@ -9,6 +10,7 @@ function App() {
       <Container>
       <HeaderNavigate/>
       </Container>
+      <Header/>
     </div>
   );
 }
