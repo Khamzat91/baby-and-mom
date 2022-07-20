@@ -2,6 +2,7 @@ import React from "react";
 import HeaderNavigate from "./components/header/HeaderNavigate";
 import Container from "./components/Container";
 import Header from "./components/header/Header";
+import Catalog from "./components/header/Catalog";
 
 
 function App() {
@@ -11,6 +12,7 @@ function App() {
       <HeaderNavigate/>
       </Container>
       <Header/>
+      <Catalog/>
     </div>
   );
 }
