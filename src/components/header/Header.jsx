@@ -3,15 +3,21 @@ import search from "../../images/content/search.svg";
 import heart from "../../images/content/heart.svg";
 import basket from "../../images/content/basket.svg";
 import "./index.scss";
+import Catalog from "./Catalog";
 
 
 const Header = () => {
   return (
     <div className="header">
       <div className="header__inner">
+        <div className="header__inner-bottom">
         <div className="header__menu active">
           <div className="header__menu-btn">
             <span/>
+            <span/>
+            <span/>
+          </div>
+          <div className="header__menu-btn__off">
             <span/>
             <span/>
           </div>
@@ -19,7 +25,8 @@ const Header = () => {
             Каталог товаров
           </div>
         </div>
-
+          <Catalog/>
+      </div>
         <form>
           <label>
             <img className="header__form-search" src={search} alt=""/>
