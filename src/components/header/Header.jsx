@@ -1,23 +1,44 @@
-import React from 'react';
+import React, { useRef } from 'react';
 import search from "../../images/content/search.svg";
 import heart from "../../images/content/heart.svg";
 import basket from "../../images/content/basket.svg";
 import "./index.scss";
 import Catalog from "./Catalog";
+import { catalogs } from './constants';
 
 
 const Header = () => {
+  const [idMouseMove, setIdMouseMove] = React.useState(null);  
+  const [activeCatalogs, setActiveCatalogs] = React.useState(null);  
+  const [activeIndex, setActiveIndex] = React.useState(false); 
+
+  const handleClickSubCatalogs = () => {
+    if(idMouseMove){
+      setIdMouseMove(true)
+    }else{
+      setIdMouseMove(null)
+    }
+  }
+
+  const handleClassActive = () => {
+    if(activeIndex){
+      setActiveIndex(false)
+    }else{
+      setActiveIndex(true)
+    }
+  }
+
   return (
     <div className="header">
       <div className="header__inner">
         <div className="header__inner-bottom">
-        <div className="header__menu active">
-          <div className="header__menu-btn">
+        <div className={"header__menu " + (activeIndex ? "active" : '')}>
+          <div onClick={handleClassActive} className="header__menu-btn">
             <span/>
             <span/>
             <span/>
           </div>
-          <div className="header__menu-btn__off">
+          <div onClick={handleClassActive} className="header__menu-btn__off">
             <span/>
             <span/>
           </div>
@@ -25,14 +46,16 @@ const Header = () => {
             Каталог товаров
           </div>
         </div>
-          <Catalog/>
+         {activeIndex && <Catalog activeCatalogs={activeCatalogs} setActiveCatalogs={setActiveCatalogs}/>}
       </div>
-        <form>
+    <div className="header__wrapper">
+    <form>
           <label>
             <img className="header__form-search" src={search} alt=""/>
             <input type="text" placeholder="Введите запрос для поиска"/>
             <button>Найти</button>
           </label>
+  
         </form>
 
         <div className="header__box">
@@ -46,6 +69,14 @@ const Header = () => {
             <span>1</span>
           </div>
         </div>
+        {activeCatalogs !== null && <div className="catalog__item-subcatalogs">
+              {handleClickSubCatalogs && catalogs[activeCatalogs]?.subCatalogs.map(({title, subCatalogsTitle}) =>
+               <ul><li className="catalog__item-subcatalogs__title">{title}</li>
+               {subCatalogsTitle.map((catalogList) => <li
+                 className="catalog__item-subcatalogs__catalog-list">{catalogList}</li>)}</ul>
+                  )}
+              </div>}
+    </div>
       </div>
     </div>
   );

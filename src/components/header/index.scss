@@ -109,9 +109,17 @@
   width: 100%;
   padding: 0 82px;
   margin: 0 auto;
+  position: relative;
+  .catalog{
+   position: absolute;
+   top: 66px;
+   max-width: 373px;
+   width: 100%;
+  }
 
   form{
    margin-right: 88px;
+   position: relative;
    label{
     position: relative;
 
@@ -149,7 +157,7 @@
     text-align: center;
     @include f500;
     position: absolute;
-    top: -5px;
+    top: -6px;
     right: 0px;
     cursor: pointer;
    }
@@ -190,7 +198,7 @@
   }
   &.active{
    background-color: $light;
-   .header__menu-title, {
+   .header__menu-title{
     color: #fff;
    }
    .header__menu-btn{
@@ -202,7 +210,6 @@
     display: block;
     width: 20px;
     margin-left: -20px;
-    margin-top: 3px;
     span {
      display: block;
      height: 2px;
@@ -272,6 +279,11 @@
    }
   }
  }
+ &__wrapper{
+    position: relative;
+    display: flex;
+    align-items: center;
+}
 }
 
 .catalog {
@@ -330,34 +342,34 @@
   }
   }
   &-subcatalogs{
-   list-style: none;
+   max-width: 717px;
+   width: 100%;
+   flex-wrap: wrap;
    position: absolute;
-  left: -30px;
+   left: 20px;
+   top: 56px;
    display: flex;
-   &--title {
+   gap: 30px;
+  
+   &__title {
     font-size: 16px;
     line-height: 22px;
     @include f500;
     color: $bg;
-    margin: 14px 20px 16px;
+    max-width: 216px;
+    width: 100%;
+    margin-bottom: 16px;
+
    }
-   &--catalog-list{
+   &__catalog-list{
     font-size: 14px;
     line-height: 19px;
     color: #686877;
-    margin-left: 20px;
-    margin-bottom: 20px;
+    padding-bottom: 8px;
+    max-width: 205px;
+    width: 100%;
    }
   }
  }
 }
 
-.header__inner-bottom{
- position: relative;
- .catalog{
-  position: absolute;
-  top: 66px;
-  max-width: 367px;
-  width: 100%;
- }
-}
