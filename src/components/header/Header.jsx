@@ -23,6 +23,7 @@ const Header = () => {
   const handleClassActive = () => {
     if(activeIndex){
       setActiveIndex(false)
+      setActiveCatalogs(null)
     }else{
       setActiveIndex(true)
     }
@@ -69,7 +70,7 @@ const Header = () => {
             <span>1</span>
           </div>
         </div>
-        {activeCatalogs !== null && <div className="catalog__item-subcatalogs">
+        {activeIndex && activeCatalogs !== null && <div className="catalog__item-subcatalogs">
               {handleClickSubCatalogs && catalogs[activeCatalogs]?.subCatalogs.map(({title, subCatalogsTitle}) =>
                <ul><li className="catalog__item-subcatalogs__title">{title}</li>
                {subCatalogsTitle.map((catalogList) => <li

@@ -1,14 +1,17 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { catalogs } from './constants';
 
 
 
 const Catalog = ({setActiveCatalogs}) => {
-  
+
+
   return (
     <div className="catalog">
       <div className="catalog__items">
-        {catalogs.map(({icon, title, subCatalogs}, index) => <div onClick={() => setActiveCatalogs(index)} className="catalog__item">
+        {catalogs.map(({icon, title, subCatalogs}, index) => <div
+        onMouseMove={() => setActiveCatalogs(index)}
+        onClick={() => setActiveCatalogs(index)} className="catalog__item">
             <div className="catalog__item-images">
               {icon}
             </div>
