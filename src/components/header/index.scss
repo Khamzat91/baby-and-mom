@@ -118,10 +118,11 @@
   }
 
   form{
-   margin-right: 88px;
    position: relative;
+   display: none;
    label{
     position: relative;
+    margin-right: 88px;
 
    input{
     margin-left: 24px;
@@ -141,7 +142,7 @@
     width: 16px;
     height: 16px;
     position: absolute;
-    top: 5px;
+    top: 10px;
     left: 40px;
     color: $bg;
     cursor: pointer;
@@ -157,7 +158,6 @@
     text-align: center;
     @include f500;
     position: absolute;
-    top: -6px;
     right: 0px;
     cursor: pointer;
    }
@@ -200,8 +200,6 @@
   }
   &.active{
    background-color: $light;
-   overflow: auto;
-   height: auto;
    .header__menu-title{
     color: #fff;
    }
@@ -226,12 +224,14 @@
      }
     }
    }
+   
   }
 
  }
  &__box{
   display: flex;
   align-items: center;
+  margin-left: 30px;
   &-user{
    margin-right: 30px;
    background-color: $light;
@@ -289,14 +289,85 @@
     display: flex;
     align-items: center;
 }
+ &__registration{
+    display: flex;
+    align-items: center;
+    label{
+        position: relative;
+        margin-right: 34px;
+    
+       input{
+        margin-left: 24px;
+        border: 1px solid #B7B8C5;
+        border-radius: 30px;
+        background-color: #fff;
+        padding: 10px 41px;
+        outline: none;
+        width: 400px;
+        color: $bg;
+        &::placeholder{
+         font-size: 15px;
+         line-height: 20px;
+         color: #B7B8C5;
+        }
+       }
+       img{
+        width: 16px;
+        height: 16px;
+        position: absolute;
+        top: 10px;
+        left: 40px;
+        color: $bg;
+        cursor: pointer;
+       }
+       button{
+        border: none;
+        background-color: $light;
+        border-radius: 0px 30px 30px 0px;
+        color: #fff;
+        padding: 8px 25px;
+        font-size: 15px;
+        line-height: 20px;
+        text-align: center;
+        @include f500;
+        position: absolute;
+        right: 0px;
+        cursor: pointer;
+       }
+      }
+     &-logout{
+        margin-right: 34px;
+     }
+     &-auth{
+         width: 34px;
+         height: 34px;
+         margin-right: 8px;
+         cursor: pointer;
+     }
+     &-text{
+     font-size: 13px;
+     line-height: 18px;
+     color: #B7B8C5;
+     cursor: pointer;
+     }
+     &-title{
+      font-size: 14px;
+      line-height: 19px;
+      @include f600;
+      color: $bg;
+      cursor: pointer;
+     }
+     &-arrowreg{
+        margin-left: 8px;
+        cursor: pointer;
+     }
+ }
 }
 
 
 
 .catalog {
  position: relative;
- height: 0;
- overflow: hidden;
  &__items{
   border: 1px solid #74CCD8;
   box-shadow: 0px 4px 11px rgba(68, 97, 132, 0.08);

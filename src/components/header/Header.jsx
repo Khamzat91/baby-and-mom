@@ -5,6 +5,7 @@ import basket from "../../images/content/basket.svg";
 import "./index.scss";
 import Catalog from "./Catalog";
 import { catalogs } from './constants';
+import HeaderRegistration from './HeaderRegistration';
 
 
 const Header = () => {
@@ -57,9 +58,7 @@ const Header = () => {
             <button>Найти</button>
           </label>
   
-        </form>
-
-        <div className="header__box">
+          <div className="header__box">
           <div className="header__box-user">N</div>
           <div className="header__box-heart">
             <img src={heart} alt=""/>
@@ -70,6 +69,8 @@ const Header = () => {
             <span>1</span>
           </div>
         </div>
+        </form>
+        <HeaderRegistration/>
         {activeIndex && activeCatalogs !== null && <div className="catalog__item-subcatalogs">
               {handleClickSubCatalogs && catalogs[activeCatalogs]?.subCatalogs.map(({title, subCatalogsTitle}) =>
                <ul><li className="catalog__item-subcatalogs__title">{title}</li>
