@@ -453,3 +453,9 @@
  }
 }
 
+.slider-presentation{
+   margin-top: 20px;
+   &_images{
+      display: flex;
+   }
+}
