@@ -4,6 +4,7 @@ import Container from "./components/Container";
 import Header from "./components/header/Header";
 import Catalog from "./components/header/Catalog";
 import SliderPresentation from "./components/slider/SliderPresentation"
+import SliderCarousel from "./components/slider/SliderCarousel";
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
       <Header/>
       <Container>
       <SliderPresentation/>
+      <SliderCarousel/>
       </Container>
     </div>
   );
