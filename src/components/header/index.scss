@@ -580,3 +580,32 @@
       }
    }
 }
+
+.commercial{
+   display: flex;
+   margin-top: 42px;
+   margin-bottom: 50px;
+   margin-left: 50px;
+
+   &__item{
+      display: flex;
+      justify-content: space-between;
+      max-width: 202px;
+      width: 100%;
+
+      img{
+         width: 55px;
+         height: 50px;
+         margin-right: 15px;
+      }
+      &__title{
+         font-size: 18px;
+         line-height: 24px;
+         @include f500;
+         color: $bg;
+      }
+      & + .commercial__item{
+         margin-left: 95px;
+      }
+   }
+}

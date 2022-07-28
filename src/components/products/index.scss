@@ -1,0 +1,60 @@
+@import "../../scss/vars";
+
+.products{
+    margin-top: 94px;
+    margin-bottom: 127px;
+    margin-left: 66px;
+    max-width: 1090px;
+    width: 100%;
+    &__title{
+        font-size: 28px;
+        line-height: 36px;
+        text-align: center;
+        @include r600;
+        color: $bg;
+    }
+    &__subtitle{
+        text-align: center;
+        font-size: 22px;
+        line-height: 28px;
+        color: #ED9BB9;
+        @include p400;
+        margin-top: 30px;
+    }
+    &__images{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: flex-end;;
+        gap: 50px;
+        margin-top: 50px;
+        cursor: pointer;
+       
+       
+        
+    }
+    &__image{
+        max-width: 140px;
+        width: 100%;
+        margin-bottom: 22px;
+        height: 126px;
+        &:hover{
+            background: #74CCD8;
+            box-shadow: 0px 2px 4px rgba(51, 196, 223, 0.2);
+            border-radius: 10px;
+            text-align: center;
+            .products__image-title{
+                color: #fff;
+                margin: 0 auto;
+            }
+            }
+      &-title{
+        font-size: 15px;
+        line-height: 18px;
+        color: $bg;
+        @include f500;
+        width: max-content;
+        margin-top: 9px;
+      }
+    }
+}
