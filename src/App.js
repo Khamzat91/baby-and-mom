@@ -7,6 +7,7 @@ import SliderPresentation from "./components/slider/SliderPresentation"
 import SliderCarousel from "./components/slider/SliderCarousel";
 import Commercial from "./components/commercial/Commercial";
 import Products from "./components/products/Products";
+import Sale from "./components/sale/Sale";
 
 function App() {
   return (
@@ -20,6 +21,7 @@ function App() {
       <SliderCarousel/>
       <Commercial/>
       <Products/>
+      <Sale/>
       </Container>
     </div>
   );
