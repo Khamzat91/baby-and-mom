@@ -3,6 +3,8 @@ import Slider from "react-slick";
 import "slick-carousel/slick/slick.css"; 
 import "slick-carousel/slick/slick-theme.css";
 import { saleCards } from '../sale/discounts';
+import { ReactComponent as Append } from '../../images/content/append.svg';
+import "./index.scss";
 
 const Sale = () => {
   var settings = {
@@ -42,18 +44,26 @@ const Sale = () => {
 <div className="sale__title">Акции и скидки</div>
 <Slider {...settings}>
 {
-  saleCards.map((card) => <div className="sale__card">
+  saleCards.map((card, index) => <div key={index} className="sale__card">
+    <div className='sale__discount-image'>
+    <img src={card.linkSaleImg} alt="" />
+  </div>
   <div className="sale__card-image">
     <img src={card.cardImg} alt="" />
   </div>
+ 
+  <div className="sale__card-heart">{card.heart}</div>
   <div className="sale__card-priced">
   <div className="sale__card-price">{card.price}</div>
-  <div className="sale__card-prisesale">{card.priseSale}</div>
+  {card.priseSale && <div className="sale__card-prisesale">{card.priseSale}</div>}
   </div>
   <div className="sale__card-description">{card.description}</div>
-  {/* <div className="sale__card-color">
-    {card.colors}
-  </div> */}
+  {card.colors && <div className='sale__card-coloured'>
+  {card.colors.map((color, index) => <div key={index} className="sale__card-color" style={{backgroundColor: color}}></div>)}
+  <div className="sale__card-append">{<Append/>}</div>
+  </div>}
+  
+  
   <div className="sale__card-logistics">
     <div className="sale__card-delivery">{card.delivery}</div>
     <div className="sale__card-subtitle">{card.subTitle}</div>

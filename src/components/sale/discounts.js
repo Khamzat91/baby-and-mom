@@ -8,9 +8,11 @@ import card6 from "../../images/card6.jpg";
 import {ReactComponent as Delivery} from "../../images/content/delivery.svg";
 import {ReactComponent as Rating} from "../../images/content/rating.svg";
 import {ReactComponent as HeartClick} from "../../images/content/heartClick.svg";
+import discountSale from "../../images/discountSale.png";
 
 export const saleCards = [
     {
+        linkSaleImg: discountSale,
         cardImg: card1,
         heart: <HeartClick/>,
         price: '100 €',
@@ -23,6 +25,7 @@ export const saleCards = [
         testimonial: '15 отзывов'
     },
     {
+        linkSaleImg: discountSale,
         cardImg: card2,
         heart: <HeartClick/>,
         price: '100 €',
@@ -35,17 +38,18 @@ export const saleCards = [
         testimonial: '15 отзывов'
     },
     {
+        linkSaleImg: discountSale,
         cardImg: card3,
         heart: <HeartClick/>,
         price: '1200 €',
         description: 'Футболка DJ Dutchjeans E38091-45 Anthracite 16...',
-        colors: ['pink', 'black', 'lightGreen', 'brown', 'brightBlue'],
         delivery: <Delivery/>,
         subTitle: 'Доставка: 1-2 дня',
         rating: <Rating/>,
         testimonial: '15 отзывов'
     },
     {
+        linkSaleImg: discountSale,
         cardImg: card4,
         heart: <HeartClick/>,
         price: '100 €',
@@ -58,6 +62,7 @@ export const saleCards = [
         testimonial: '15 отзывов'
     },
     {
+        linkSaleImg: discountSale,
         cardImg: card5,
         heart: <HeartClick/>,
         price: '1000 €',
@@ -70,6 +75,7 @@ export const saleCards = [
         testimonial: '15 отзывов'
     },
     {
+        linkSaleImg: discountSale,
         cardImg: card6,
         heart: <HeartClick/>,
         price: '100 €',
@@ -82,3 +88,4 @@ export const saleCards = [
         testimonial: '15 отзывов'
     }
 ]
+
