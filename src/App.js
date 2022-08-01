@@ -8,6 +8,7 @@ import SliderCarousel from "./components/slider/SliderCarousel";
 import Commercial from "./components/commercial/Commercial";
 import Products from "./components/products/Products";
 import Sale from "./components/sale/Sale";
+import AboutDiscounts from "./components/aboutDiscounts/AboutDiscounts";
 
 function App() {
   return (
@@ -23,6 +24,7 @@ function App() {
       <Products/>
       <Sale/>
       </Container>
+      <AboutDiscounts/>
     </div>
   );
 }

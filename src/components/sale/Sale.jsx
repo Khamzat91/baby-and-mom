@@ -47,6 +47,7 @@ const Sale = () => {
   saleCards.map((card, index) => <div key={index} className="sale__card">
     <div className='sale__discount-image'>
     <img src={card.linkSaleImg} alt="" />
+    <span>50%</span>
   </div>
   <div className="sale__card-image">
     <img src={card.cardImg} alt="" />
