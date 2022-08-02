@@ -88,8 +88,6 @@
     display: flex;
     margin: 0 20px 16px;
     position: relative;
-    max-width: 183px;
-    width: 100%;
     }
     &-color{
        border: none;
@@ -133,7 +131,6 @@
         justify-content: center;
         align-items: center;
         cursor: pointer;
-        position: absolute;
         right: 8px;
     }
 }

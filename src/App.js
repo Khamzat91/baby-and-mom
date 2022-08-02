@@ -11,6 +11,7 @@ import Sale from "./components/sale/Sale";
 import AboutDiscounts from "./components/aboutDiscounts/AboutDiscounts";
 import Popular from "./components/popular/Popular";
 import Novelty from "./components/novelty/Novelty";
+import AboutUs from "./components/aboutUs/AboutUs";
 
 function App() {
   return (
@@ -30,6 +31,7 @@ function App() {
       <Container>
       <Popular/>
       <Novelty/>
+      <AboutUs/>
       </Container>
     </div>
   );
