@@ -7,7 +7,7 @@ import { ReactComponent as Append } from '../../images/content/append.svg';
 import "./index.scss";
 
 const Sale = () => {
-  var settings = {
+  const settings = {
     speed: 500,
     slidesToShow: 4,
     slidesToScroll: 4,
@@ -60,10 +60,11 @@ const Sale = () => {
   </div>
   <div className="sale__card-description">{card.description}</div>
   {card.colors && <div className='sale__card-coloured'>
+    <div className="sale__card-wrapper"> 
   {card.colors.map((color, index) => <div key={index} className="sale__card-color" style={{backgroundColor: color}}></div>)}
-  <div className="sale__card-append">{<Append/>}</div>
+  </div>
+  {card.append && <div className="popular__card-append">{card.append}</div>}
   </div>}
-  
   
   <div className="sale__card-logistics">
     <div className="sale__card-delivery">{card.delivery}</div>

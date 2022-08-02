@@ -9,6 +9,8 @@ import Commercial from "./components/commercial/Commercial";
 import Products from "./components/products/Products";
 import Sale from "./components/sale/Sale";
 import AboutDiscounts from "./components/aboutDiscounts/AboutDiscounts";
+import Popular from "./components/popular/Popular";
+import Novelty from "./components/novelty/Novelty";
 
 function App() {
   return (
@@ -25,6 +27,10 @@ function App() {
       <Sale/>
       </Container>
       <AboutDiscounts/>
+      <Container>
+      <Popular/>
+      <Novelty/>
+      </Container>
     </div>
   );
 }

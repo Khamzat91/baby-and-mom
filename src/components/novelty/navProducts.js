@@ -9,31 +9,30 @@ import {ReactComponent as Delivery} from "../../images/content/delivery.svg";
 import {ReactComponent as Rating} from "../../images/content/rating.svg";
 import {ReactComponent as HeartClick} from "../../images/content/heartClick.svg";
 import { ReactComponent as Append } from '../../images/content/append.svg';
-import discountSale from "../../images/discountSale.png";
+import novetllyProd from "../../images/novetllyProd.png";
 
-export const saleCards = [
+export const navCards = [
     {
-        linkSaleImg: discountSale,
+        linkSaleImg: novetllyProd,
         cardImg: card1,
         heart: <HeartClick/>,
         price: '100 €',
         priseSale: '250 €',
         description: 'Safety 1st Timba Natural Wood 3 в 1 Стульчик для кормления + подушка',
-        colors: ['pink', 'black', 'lightGreen', 'brown', '#f00'],
-        append: <Append/>,
+        colors: ['pink', 'black', 'lightGreen', 'brown', 'brightBlue'],
         delivery: <Delivery/>,
         subTitle: 'Доставка: 1-2 дня',
         rating: <Rating/>,
         testimonial: '15 отзывов'
     },
     {
-        linkSaleImg: discountSale,
+        linkSaleImg: novetllyProd,
         cardImg: card2,
         heart: <HeartClick/>,
         price: '100 €',
         priseSale: '250 €',
         description: 'Safety 1st Timba Natural',
-        colors: ['pink', 'black', 'lightGreen', 'brown', '#f00'],
+        colors: ['pink', 'black', 'lightGreen', 'brown', 'brightBlue'],
         append: <Append/>,
         delivery: <Delivery/>,
         subTitle: 'Доставка: 1-2 дня',
@@ -41,7 +40,7 @@ export const saleCards = [
         testimonial: '15 отзывов'
     },
     {
-        linkSaleImg: discountSale,
+        linkSaleImg: novetllyProd,
         cardImg: card3,
         heart: <HeartClick/>,
         price: '1200 €',
@@ -52,13 +51,13 @@ export const saleCards = [
         testimonial: '15 отзывов'
     },
     {
-        linkSaleImg: discountSale,
+        linkSaleImg: novetllyProd,
         cardImg: card4,
         heart: <HeartClick/>,
         price: '100 €',
         priseSale: '250 €',
         description: 'Safety 1st Timba Natural',
-        colors: ['pink', 'black', 'lightGreen', 'brown', '#f00'],
+        colors: ['pink', 'black', 'lightGreen', 'brown', 'brightBlue'],
         append: <Append/>,
         delivery: <Delivery/>,
         subTitle: 'Доставка: 1-2 дня',
@@ -66,13 +65,13 @@ export const saleCards = [
         testimonial: '15 отзывов'
     },
     {
-        linkSaleImg: discountSale,
+        linkSaleImg: novetllyProd,
         cardImg: card5,
         heart: <HeartClick/>,
         price: '1000 €',
         priseSale: '250 €',
         description: 'Safety 1st Timba Natural Wood 3 в 1 Стульчик для кормления + подушка',
-        colors: ['pink', 'black', 'lightGreen', 'brown', '#f00'],
+        colors: ['pink', 'black', 'lightGreen', 'brown', 'brightBlue'],
         append: <Append/>,
         delivery: <Delivery/>,
         subTitle: 'Доставка: 1-2 дня',
@@ -80,14 +79,13 @@ export const saleCards = [
         testimonial: '15 отзывов'
     },
     {
-        linkSaleImg: discountSale,
+        linkSaleImg: novetllyProd,
         cardImg: card6,
         heart: <HeartClick/>,
         price: '100 €',
         priseSale: '250 €',
         description: 'Футболка DJ Dutchjeans E38091-45 Anthracite 16...',
-        colors: ['pink', 'black', 'lightgreen', 'brown', '#f00', 'brown'],
-        append: <Append/>,
+        colors: ['pink', 'black', 'lightGreen', 'brown', 'brightBlue'],
         delivery: <Delivery/>,
         subTitle: 'Доставка: 1-2 дня',
         rating: <Rating/>,

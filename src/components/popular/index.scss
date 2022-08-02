@@ -1,7 +1,7 @@
 @import "../../scss/vars";
 
 
-.sale{
+.popular{
     max-width: 1116px;
     width: 100%;
     margin-bottom: 97px;
@@ -23,10 +23,11 @@
         position: absolute;
         font-size: 14px;
         line-height: 18px;
-        color: $bg;
+        color: #fff;
         @include f600;
         top: 17px;
-        left: 14px;
+        left: 10px;
+        text-transform: uppercase;
 
         }
     }
@@ -36,11 +37,6 @@
     position: relative;
     margin-left: 24px;
     
-    &-wrapper {
-        display: flex;
-        align-items: center; 
-    }
-
     &-image{
         margin-bottom: 12px;
         text-align: center;
@@ -89,14 +85,14 @@
      margin: 0 20px 16px;
     }
     &-coloured{
-    max-width: 221px;
-    width: 100%;
     display: flex;
     margin: 0 20px 16px;
     position: relative;
+    max-width: 183px;
+    width: 100%;
     }
     &-color{
-       border: 1px solid rgba(0, 0, 0, .2);
+       border: none;
         width: 30px;
         height: 30px;
         border-radius: 50%;
@@ -137,6 +133,8 @@
         justify-content: center;
         align-items: center;
         cursor: pointer;
+        position: absolute;
+        right: 8px;
     }
 }
 .slick-slider {
