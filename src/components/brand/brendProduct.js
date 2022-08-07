@@ -19,7 +19,7 @@ import brand12 from "../../images/brand12.png";
 
 export const brandCards = [
     {
-        linkBrendImg: brand1,
+        linkBrandImg: brand1,
         title: 'Philips Avent'
     },
     {

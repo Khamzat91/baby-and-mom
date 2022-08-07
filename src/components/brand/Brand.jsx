@@ -8,18 +8,20 @@ export const Brand = () => {
     <div className="brand">
       <div className="brand__title">Бренды</div>
       <div className="brand-ad">
-        {brandCards.map((obj) => (
-          <div className="brand-ad__images">
+        <div className="brand-ad__images">
+          {brandCards.map((obj) => (
             <div className="brand-ad__image">
-              <img src={obj.linkBrandImg} alt="" />
+              <div className="brand-ad__img">
+                <img src={obj.linkBrandImg} alt="" />
+              </div>
+              <div className="brand-ad__title">{obj.title}</div>
             </div>
-            <div className="brand-ad__title">{obj.title}</div>
-          </div>
-        ))}
+          ))}
+        </div>
       </div>
       <div className="brand__all">
         <button>Смотреть все бренды</button>
-        <BrandArrow />
+        <BrandArrow className="brand__all-arrow"/>
       </div>
     </div>
   );
