@@ -12,6 +12,7 @@ import AboutDiscounts from "./components/aboutDiscounts/AboutDiscounts";
 import Popular from "./components/popular/Popular";
 import Novelty from "./components/novelty/Novelty";
 import AboutUs from "./components/aboutUs/AboutUs";
+import Brand from "./components/brand/Brand";
 
 function App() {
   return (
@@ -32,6 +33,7 @@ function App() {
       <Popular/>
       <Novelty/>
       <AboutUs/>
+      <Brand/>
       </Container>
     </div>
   );
