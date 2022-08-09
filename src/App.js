@@ -14,6 +14,7 @@ import Novelty from "./components/novelty/Novelty";
 import AboutUs from "./components/aboutUs/AboutUs";
 import Brand from "./components/brand/Brand";
 import Contacts from "./components/contacts/Contacts";
+import Reviews from "./components/reviews/Reviews";
 
 function App() {
   return (
@@ -36,6 +37,7 @@ function App() {
       <AboutUs/>
       <Brand/>
       <Contacts/>
+      <Reviews/>
       </Container>
     </div>
   );
