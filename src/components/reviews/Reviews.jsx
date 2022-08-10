@@ -23,7 +23,7 @@ export const Reviews = () => {
         {customerCard.map((obj) => (
           <div className="reviews__card">
             <div className="reviews__card-data">
-              {<div className="reviews__card-avatar">{obj.avatar ? <img src="" alt=""/>: obj.name[0]}</div>}
+              {<div className="reviews__card-avatar">{obj.avatar ? <img src="" alt=""/> : obj.name[0]}</div>}
 
               <div className="reviews__card-info">
                 <div className="reviews__card-name">{obj.name}</div>
@@ -32,7 +32,7 @@ export const Reviews = () => {
                     {obj.technician} .
                   </div>}
                   <div className="reviews__card-feedback">
-                    {obj.feedback} отзыв .
+                    {obj.feedback} отзыв . 
                   </div>
                   <div className="reviews__card-count">{obj.countImg} фото</div>
                 </div>

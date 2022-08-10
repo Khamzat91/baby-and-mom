@@ -15,6 +15,8 @@ import AboutUs from "./components/aboutUs/AboutUs";
 import Brand from "./components/brand/Brand";
 import Contacts from "./components/contacts/Contacts";
 import Reviews from "./components/reviews/Reviews";
+import Wallpaper from "./components/wallpaper/Wallpaper";
+import OurBlog from "./components/ourBlog/OurBlog";
 
 function App() {
   return (
@@ -38,6 +40,8 @@ function App() {
       <Brand/>
       <Contacts/>
       <Reviews/>
+      <Wallpaper/>
+      <OurBlog/>
       </Container>
     </div>
   );
