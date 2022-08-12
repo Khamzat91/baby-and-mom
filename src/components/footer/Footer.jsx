@@ -16,6 +16,7 @@ const Footer = () => {
     <div className="footer">
       <div className="footer__inner">
         <div className="footer__contacts">
+            <div className="footer__contacts-title">Контакты</div>
           <div className="footer__contacts-phone">
             <Phone />
             <a href="tel:380974356743">+38 097 435 6743</a>
@@ -25,7 +26,7 @@ const Footer = () => {
             <Messenger className="footer__contacts-messengeres__messenger" />
           </div>
           <div className="footer__contacts-email">
-            <Mail />
+            <Mail className="footer__contacts-mail"/>
             <a href="#">Kidsshop@gmail.com</a>
           </div>
           <div className="footer__contacts-wach">
@@ -34,6 +35,8 @@ const Footer = () => {
           </div>
         </div>
         <div className="footer__main">
+            <div className="footer__main-title">Меню сайта</div>
+            <div className="footer__main-wrapper">
           <ul className="footer__link-left">
             <li>
               <a href="#">Каталог</a>
@@ -71,15 +74,18 @@ const Footer = () => {
               <a href="#">Контакты</a>
             </li>
           </ul>
+          </div>
         </div>
         <div className="footer__social">
+            <div className="footer__social-title">Социальные сети</div>
           <div className="footer__apps">
             <Twitter className="footer__apps-twitter" />
             <Instagram className="footer__apps-instagram" />
             <Facebook className="footer__apps-facebook" />
             <Youtube className="footer__apps-youtube" />
           </div>
-          <img src={logo} alt="" className="footer__apps-logo" />
+          <a href="#"><img src={logo} alt="" className="footer__apps-logo" /></a>
+          
         </div>
       </div>
       <div className="footer__bottom">2011-2022 Все права защищены</div>

@@ -17,6 +17,7 @@ import Contacts from "./components/contacts/Contacts";
 import Reviews from "./components/reviews/Reviews";
 import Wallpaper from "./components/wallpaper/Wallpaper";
 import OurBlog from "./components/ourBlog/OurBlog";
+import Footer from "./components/footer/Footer";
 
 function App() {
   return (
@@ -42,6 +43,7 @@ function App() {
       <Reviews/>
       <Wallpaper/>
       <OurBlog/>
+      <Footer/>
       </Container>
     </div>
   );
