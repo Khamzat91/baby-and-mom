@@ -3,7 +3,7 @@ import aboutBasket from "../../images/aboutBasket.png";
 import { ReactComponent as Mesage } from "../../images/content/mesage.svg";
 import "./index.scss";
 
-export const Contacts = () => {
+ const Contacts = () => {
   return (
     <div className="contacts">
       <div className="contacts__image">

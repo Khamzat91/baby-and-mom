@@ -6,7 +6,7 @@ import { customerCard } from "./shopper";
 import { ReactComponent as Google } from "../../images/content/google.svg";
 import "./index.scss";
 
-export const Reviews = () => {
+const Reviews = () => {
     const settings = {
        
         speed: 500,

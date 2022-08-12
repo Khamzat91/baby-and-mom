@@ -3,7 +3,7 @@ import { brandCards } from "./brendProduct";
 import { ReactComponent as BrandArrow } from "../../images/content/brand-arrow.svg";
 import "./index.scss";
 
-export const Brand = () => {
+const Brand = () => {
   return (
     <div className="brand">
       <div className="brand__title">Бренды</div>

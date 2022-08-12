@@ -2,7 +2,7 @@ import React from 'react';
 import { ReactComponent as Clock} from '../../images/content/clock.svg';
 import "./index.scss";
 
-export const AboutDiscounts = () => {
+const AboutDiscounts = () => {
   return (
     <div className='about-discounts'>
     <div className="about-discounts__image">
