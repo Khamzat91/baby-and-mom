@@ -5,6 +5,16 @@ import email from "../../images/content/email.svg";
 import "./index.scss";
 
 const HeaderNavigate = () => {
+const [lang, setLang] = React.useState(false);
+
+const handleClickActiveLang = () => {
+  if(lang){
+    setLang(false)
+  }else{
+    setLang(true)
+  }
+}
+  
   return (
     <div className="navigate">
       <div className="navigate__wrapper">
@@ -56,8 +66,10 @@ const HeaderNavigate = () => {
           </div>
         </div>
         <div className="navigate__wrapper-lang">
-          <div className="navigate__wrapper-interpreter active">РУ</div>
-          <div className="navigate__wrapper-interpreter">LV</div>
+         {lang ? <div onClick={handleClickActiveLang} className="navigate__wrapper-interpreter active">РУ</div>
+         :  <div onClick={handleClickActiveLang} className="navigate__wrapper-interpreter">РУ</div>}
+           {!lang ? <div onClick={handleClickActiveLang} className="navigate__wrapper-interpreter active">LV</div>
+         :  <div onClick={handleClickActiveLang} className="navigate__wrapper-interpreter">LV</div>}
         </div>
       </div>
     </div>

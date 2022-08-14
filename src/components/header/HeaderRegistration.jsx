@@ -6,7 +6,7 @@ import heart from "../../images/content/heart.svg";
 import basket from "../../images/content/basket.svg";
 import "./index.scss";
 
-const HeaderRegistration = () => {
+const HeaderRegistration = ({handleClickAuth}) => {
   return (
     <div className="header__registration">
     <label>
@@ -16,12 +16,17 @@ const HeaderRegistration = () => {
       </label>
       <Auth className="header__registration-auth"/>
       <div className="header__registration-logout">
-        <div className="header__registration-text">Войти</div>
+        <div onClick={handleClickAuth} className="header__registration-text">Войти</div>
         <div className="header__registration-title">
         Регистрироватся
         <Registration className="header__registration-arrowreg"/>
         </div>
       </div>
+      <div className="header__box-btnAd">
+              <span />
+              <span />
+              <span />
+            </div>
       <div className="header__box-heart">
         <img src={heart} alt=""/>
       </div>
