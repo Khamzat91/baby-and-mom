@@ -1,41 +1,97 @@
-
-@media(max-width: 480px){
-    .navigate__wrapper-list{
-        display: none;
-    }
-    .navigate__wrapper-info{
-        display: none;
-    }
-    .navigate__wrapper-lang{
-        display: none;
-    }
-    .header__menu{
-        display: none;
-    }
-    .header__registration label{
-        display: none;
-    }
-    .header__registration-auth{
-        display: none;
-    }
-    .header__registration-logout{
-        display: none;
-    }
-    .header__menu-btn {
-        width: 20px;
-        margin-left: 26px;
+@media (max-width: 480px) {
+  .navigate__wrapper-list {
+    display: none;
+  }
+  .navigate__wrapper-info {
+    display: none;
+  }
+  .navigate__wrapper-lang {
+    display: none;
+  }
+  .header__menu {
+    display: none;
+  }
+  .header__registration label {
+    display: none;
+  }
+  .header__registration-auth {
+    display: none;
+  }
+  .header__registration-logout {
+    display: none;
+  }
+  .header__menu-btn {
+    width: 20px;
+    margin-left: 26px;
     span {
-        display: block;
-        height: 2px;
-        background-color: #B7B8C5;
-        border-radius: 1px;
+      display: block;
+      height: 2px;
+      background-color: #b7b8c5;
+      border-radius: 1px;
     }
+  }
+  .header__box-btnAd {
+    display: block;
+    margin-right: 14px;
+    cursor: pointer;
+    position: relative;
+  }
+  .header__box-btnList {
+    display: block;
+    position: absolute;
+    left: -1px;
+    top: 43px;
+    z-index: 1;
+    width: 300px;
+    border-top: 1px solid #000;
+    height: 0;
+    transition: all .5s;
+    li {
+      padding-bottom: 9px;
+      padding-top: 9px;
+      border-bottom: 1px solid #000;
+      background-color: #fff;
+      a {
+        text-decoration: none;
+        font-size: 13px;
+        line-height: 18px;
+        color: #090f24;
+        &:hover {
+          font-family: "Noto Sans", sans-serif;
+          font-weight: 500;
+          color: #ed9bb9;
+        }
+      }
     }
-    .header__box-btnAd{
-        display: block;
+  }
+  .navigate__wrapper-logo {
+    display: none;
+  }
+  .header__inner {
+    padding: 0 27px;
+  }
+  .header__box {
+    &-main {
+      display: flex;
+      align-items: center;
+      padding: 16px 0;
+      &__left {
+        margin-right: 136px;
+        display: flex;
+        align-items: center;
+      }
+      &__right {
+        display: flex;
+        align-items: center;
+      }
     }
-    .navigate__wrapper-logo{
-        display: none;
-    }
-   
+  }
+  .header__box-heart {
+    margin-right: 18px;
+    margin-left: 18px;
+  }
+  .header__box-searchAdap {
+    display: block;
+    cursor: pointer;
+  }
 }
