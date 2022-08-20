@@ -117,7 +117,7 @@
    width: 100%;
   }
 
-  form{
+  form{ 
    position: relative;
    display: flex;
    label{
@@ -304,6 +304,14 @@
   &-btnList{
    display: none;
   }
+  &-logo{
+         display: none;
+      }
+      &-main__right{
+         display: flex;
+         align-items: center;
+      }
+   
  }
  &__wrapper{
     position: relative;
