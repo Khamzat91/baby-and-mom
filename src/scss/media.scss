@@ -72,20 +72,32 @@
       }
     }
   }
+  .slick-slide img {
+    width: 100%;
+}
   .slider-presentation{
     display: block;
   }
   .slider-presentation__right{
     display: flex;
     margin-top: 25px;
+    width: 100%;
     
     img{
-      padding: 0 5px;
+      width: 50%;
     }
     img:last-child {
      margin-top: 0; 
+     margin-left: 5px;
   }
   }
+  .slider-presentation .slick-slider .slick-arrow.slick-prev::before {
+    top: 93px;
+}
+.slider-presentation .slick-slider .slick-arrow.slick-next::before {
+  bottom: 95px;
+  left: 352px;
+}
   
   .navigate__wrapper-logo {
     display: none;
