@@ -593,7 +593,7 @@
       }
       .slick-arrow.slick-next{
          position: relative;
-          &::before{
+          &::after{
             content: '';
             position: absolute;
             background-image: url(../../images/content/next.svg);
