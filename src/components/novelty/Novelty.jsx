@@ -2,45 +2,16 @@ import React from 'react'
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css"; 
 import "slick-carousel/slick/slick-theme.css";
-import { navCards } from './navProducts';
+import { navCards, settings } from './navProducts';
 import "./index.scss";
+import { useCurrentWidth } from './useCurrentWidth';
 
 const Novelty = () => {
-  var settings = {
-    speed: 500,
-    slidesToShow: 4,
-    slidesToScroll: 4,
-    initialSlide: 0,
-    responsive: [
-      {
-        breakpoint: 1024,
-        settings: {
-          slidesToShow: 3,
-          slidesToScroll: 3,
-          infinite: true,
-          dots: true
-        }
-      },
-      {
-        breakpoint: 600,
-        settings: {
-          slidesToShow: 2,
-          slidesToScroll: 2,
-          initialSlide: 2
-        }
-      },
-      {
-        breakpoint: 480,
-        settings: {
-          slidesToShow: 1,
-          slidesToScroll: 1
-        }
-      }
-    ]
-  };
+  const width = useCurrentWidth();
+
   return (
     <div className='novelty'>
-<div className="novelty__title">Популярные товары</div>
+<div className="novelty__title">Вы уже смотрели</div>
 <Slider {...settings}>
 {
   navCards.map((card, index) => <div key={index} className="novelty__card">
@@ -57,9 +28,11 @@ const Novelty = () => {
   <div className="novelty__card-price">{card.price}</div>
   {card.priseSale && <div className="novelty__card-prisesale">{card.priseSale}</div>}
   </div>
-  <div className="novelty__card-description">{card.description}</div>
+  <div className="novelty__card-description">{card.description.slice(0, 50)+'...'}</div>
   {card.colors && <div className='novelty__card-coloured'>
-  {card.colors.map((color, index) => <div key={index} className="novelty__card-color" style={{backgroundColor: color}}></div>)}
+  {card.colors
+    .filter((color, index) => width <= 480 ? index < 3 : color)
+    .map((color) => <div key={color} className="novelty__card-color" style={{backgroundColor: color}}></div>)}
   {card.append && <div className="popular__card-append">{card.append}</div>}
   </div>}
   
@@ -71,6 +44,7 @@ const Novelty = () => {
   <div className="novelty__card-recall">
     <div className="novelty__card-rating">{card.rating}</div>
     <div className="novelty__card-testimonial">{card.testimonial}</div>
+    <div className="novelty__card-test">(15)</div>
   </div>
   </div>)
 }

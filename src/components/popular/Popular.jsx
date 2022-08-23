@@ -32,8 +32,8 @@ const Popular = () => {
       {
         breakpoint: 480,
         settings: {
-          slidesToShow: 1,
-          slidesToScroll: 1
+          slidesToShow: 2,
+          slidesToScroll: 2
         }
       }
     ]
@@ -57,7 +57,7 @@ const Popular = () => {
   <div className="popular__card-price">{card.price}</div>
   {card.priseSale && <div className="popular__card-prisesale">{card.priseSale}</div>}
   </div>
-  <div className="popular__card-description">{card.description}</div>
+  <div className="popular__card-description">{card.description.slice(0, 50)+'...'}</div>
   {card.colors && <div className='popular__card-coloured'>
   {card.colors.map((color, index) => <div key={index} className="popular__card-color" style={{backgroundColor: color}}></div>)}
   {card.append && <div className="popular__card-append">{card.append}</div>}
@@ -71,6 +71,7 @@ const Popular = () => {
   <div className="popular__card-recall">
     <div className="popular__card-rating">{card.rating}</div>
     <div className="popular__card-testimonial">{card.testimonial}</div>
+    <div className="novelty__card-test">(15)</div>
   </div>
   </div>)
 }

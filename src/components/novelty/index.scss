@@ -1,171 +1,178 @@
 @import "../../scss/vars";
 
-
-.novelty{
-    max-width: 1116px;
-    width: 100%;
-    margin-bottom: 97px;
+.novelty {
+  max-width: 1116px;
+  width: 100%;
+  margin-bottom: 97px;
+  position: relative;
+  &__title {
+    color: $bg;
+    font-size: 28px;
+    @include r600;
+    line-height: 36px;
+    text-align: center;
+    margin-bottom: 30px;
+  }
+  &__discount-image {
+    position: absolute;
+    top: 20px;
+    left: 20px;
     position: relative;
-    &__title{
-        color: $bg;
-        font-size: 28px;
-        @include r600;
-        line-height: 36px;
-        text-align: center;
-        margin-bottom: 30px;
+    span {
+      position: absolute;
+      font-size: 14px;
+      line-height: 18px;
+      color: #fff;
+      @include f600;
+      top: 10px;
+      left: 10px;
+      text-transform: uppercase;
     }
-    &__discount-image{
-        position: absolute;
-        top: 20px;
-        left: 20px;
-        position: relative;
-        span{
-        position: absolute;
-        font-size: 14px;
-        line-height: 18px;
-        color: #fff;
-        @include f600;
-        top: 10px;
-        left: 10px;
-        text-transform: uppercase;
-
-        }
-    }
-    &__card{
+  }
+  &__card {
     max-width: 261px;
     width: 100%;
     position: relative;
     margin-left: 24px;
-    
-    &-image{
-        margin-bottom: 12px;
-        text-align: center;
-        margin: 10px;
-        cursor: pointer;
-    
+
+    &-image {
+      margin-bottom: 12px;
+      text-align: center;
+      margin: 10px;
+      cursor: pointer;
+      img {
+        width: 180px;
+        height: 180px;
+      }
     }
-    &-heart{
-        position: absolute;
-        top: 30px;
-        right: 30px;
-        cursor: pointer;
+    &-heart {
+      position: absolute;
+      top: 30px;
+      right: 30px;
+      cursor: pointer;
     }
-    &-priced{
-     margin: 0 20px 16px;
-     display: flex;
-     align-items: center
+    &-priced {
+      margin: 0 20px 16px;
+      display: flex;
+      align-items: center;
     }
-    &-price{
-     @include f600;
-     font-size: 22px;
-     line-height: 28px;
-     color: $bg;
-     margin-right: 10px;
-     cursor: pointer;
+    &-price {
+      @include f600;
+      font-size: 22px;
+      line-height: 28px;
+      color: $bg;
+      margin-right: 10px;
+      cursor: pointer;
     }
-    &-prisesale{
-    color: #B7B8C5;
-    line-height: 22px;
-    font-size: 18px;
-    position: relative;
-    &::before{
-        content: '';
+    &-prisesale {
+      color: #b7b8c5;
+      line-height: 22px;
+      font-size: 18px;
+      position: relative;
+      &::before {
+        content: "";
         position: absolute;
         width: 44px;
         height: 1px;
-        background-color: #B7B8C5;
+        background-color: #b7b8c5;
         top: 12px;
         left: 0;
+      }
     }
+    &-description {
+      font-size: 18px;
+      line-height: 22px;
+      color: $bg;
+      margin: 0 20px 16px;
     }
-    &-description{
-     font-size: 18px;
-     line-height: 22px;
-     color: $bg;
-     margin: 0 20px 16px;
+    &-coloured {
+      display: flex;
+      margin: 0 20px 16px;
+      position: relative;
     }
-    &-coloured{
-    display: flex;
-    margin: 0 20px 16px;
-    position: relative;
+    &-color {
+      border: none;
+      width: 30px;
+      height: 30px;
+      border-radius: 50%;
+      cursor: pointer;
+      margin-right: 8px;
     }
-    &-color{
-       border: none;
-        width: 30px;
-        height: 30px;
-        border-radius: 50%;
-        cursor: pointer;
-        margin-right: 8px;
-
+    &-logistics {
+      display: flex;
+      margin: 0 20px 16px;
+      align-items: center;
     }
-    &-logistics{
-        display: flex;
-        margin: 0 20px 16px;
-        align-items: center;
+    &-delivery {
+      margin-right: 10px;
     }
-    &-delivery{
-    margin-right: 10px;
+    &-subtitle {
+      font-size: 15px;
+      line-height: 18px;
+      color: #686877;
     }
-    &-subtitle{
-     font-size: 15px;
-     line-height: 18px;
-     color: #686877;
+    &-recall {
+      display: flex;
+      margin: 0 20px 16px;
+      align-items: center;
     }
-    &-recall{
-    display: flex;
-    margin: 0 20px 16px;
-    align-items: center;
+    &-testimonial {
+      margin-left: 7px;
+      font-size: 14px;
+      line-height: 16px;
+      color: #b7b8c5;
     }
-    &-testimonial{
-    margin-left: 7px;
-    font-size: 14px;
-    line-height: 16px;
-    color: #B7B8C5;
+    &-test{
+        display: none;
+        margin-left: 7px;
+        font-size: 14px;
+        line-height: 16px;
+        color: #b7b8c5;
     }
-    &-append{
-        width: 30px;
-        height: 30px;
-        border-radius: 50%;
-        border: 1px solid #B7B8C5;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        cursor: pointer;
-        right: 8px;
+    &-append {
+      width: 30px;
+      height: 30px;
+      border-radius: 50%;
+      border: 1px solid #b7b8c5;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      cursor: pointer;
+      right: 8px;
     }
-}
-.slick-slider {
-    .slick-arrow.slick-prev{
-        width: 0;
-        height: 0;
-        &::before{
-            content: '';
-            position: absolute;
-            background-image: url(../../images/content/prev.svg);
-            background-repeat: no-repeat;
-            background-size: cover;
-            background-position: center;
-            top: -3px;
-            left: 14px;
-            width: 10px;
-            height: 20px;
-        }
+  }
+  .slick-slider {
+    .slick-arrow.slick-prev {
+      width: 0;
+      height: 0;
+      &::before {
+        content: "";
+        position: absolute;
+        background-image: url(../../images/content/prev.svg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        top: -3px;
+        left: 14px;
+        width: 10px;
+        height: 20px;
+      }
     }
-    .slick-arrow.slick-next{
-        width: 0;
-        height: 0;
-        &::after{
-            content: '';
-            position: absolute;
-            width: 10px;
-            height: 20px;
-            background-image: url(../../images/content/next.svg);
-            background-repeat: no-repeat;
-            background-size: cover;
-            background-position: center;
-            right: 14px;
-            top: 3px;
-        }
+    .slick-arrow.slick-next {
+      width: 0;
+      height: 0;
+      &::after {
+        content: "";
+        position: absolute;
+        width: 10px;
+        height: 20px;
+        background-image: url(../../images/content/next.svg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        right: 14px;
+        top: 3px;
+      }
     }
-}
+  }
 }

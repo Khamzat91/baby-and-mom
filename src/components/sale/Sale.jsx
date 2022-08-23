@@ -33,8 +33,8 @@ const Sale = () => {
       {
         breakpoint: 480,
         settings: {
-          slidesToShow: 1,
-          slidesToScroll: 1
+          slidesToShow: 2,
+          slidesToScroll: 2
         }
       }
     ]
@@ -58,7 +58,7 @@ const Sale = () => {
   <div className="sale__card-price">{card.price}</div>
   {card.priseSale && <div className="sale__card-prisesale">{card.priseSale}</div>}
   </div>
-  <div className="sale__card-description">{card.description}</div>
+  <div className="sale__card-description">{card.description.slice(0, 50)+'...'}</div>
   {card.colors && <div className='sale__card-coloured'>
   {card.colors.map((color, index) => <div key={index} className="sale__card-color" style={{backgroundColor: color}}></div>)}
   {card.append && <div className="popular__card-append">{card.append}</div>}
