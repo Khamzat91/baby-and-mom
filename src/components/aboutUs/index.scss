@@ -5,6 +5,8 @@
     margin-bottom: 60px;
     &__inner{
         display: flex;
+        align-items: center;
+        justify-content: center;
         margin-left: 82px;
         &-info{
             max-width: 604px;

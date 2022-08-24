@@ -37,9 +37,13 @@ function App() {
       <Container>
       <Popular/>
       <Novelty/>
+      </Container>
       <AboutUs/>
+      <Container>
       <Brand/>
+      </Container>
       <Contacts/>
+      <Container>
       <Reviews/>
       <Wallpaper/>
       <OurBlog/>

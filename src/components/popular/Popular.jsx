@@ -3,9 +3,11 @@ import Slider from "react-slick";
 import "slick-carousel/slick/slick.css"; 
 import "slick-carousel/slick/slick-theme.css";
 import {goodsCards} from "../popular/goods";
+import { useCurrentWidth } from '../novelty/useCurrentWidth';
 import "./index.scss";
 
 const Popular = () => {
+  const width = useCurrentWidth();
   var settings = {
     speed: 500,
     slidesToShow: 4,
@@ -59,7 +61,8 @@ const Popular = () => {
   </div>
   <div className="popular__card-description">{card.description.slice(0, 50)+'...'}</div>
   {card.colors && <div className='popular__card-coloured'>
-  {card.colors.map((color, index) => <div key={index} className="popular__card-color" style={{backgroundColor: color}}></div>)}
+  {card.colors.filter((color, index) => width <= 480 ? index < 3 : color)
+  .map((color, index) => <div key={index} className="popular__card-color" style={{backgroundColor: color}}></div>)}
   {card.append && <div className="popular__card-append">{card.append}</div>}
   </div>}
   

@@ -4,9 +4,11 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import { saleCards } from '../sale/discounts';
 import { ReactComponent as Append } from '../../images/content/append.svg';
+import { useCurrentWidth } from '../novelty/useCurrentWidth';
 import "./index.scss";
 
 const Sale = () => {
+  const width = useCurrentWidth();
   var settings = {
     speed: 500,
     slidesToShow: 4,
@@ -60,7 +62,8 @@ const Sale = () => {
   </div>
   <div className="sale__card-description">{card.description.slice(0, 50)+'...'}</div>
   {card.colors && <div className='sale__card-coloured'>
-  {card.colors.map((color, index) => <div key={index} className="sale__card-color" style={{backgroundColor: color}}></div>)}
+  {card.colors.filter((color, index) => width <= 480 ? index < 3 : color)
+  .map((color, index) => <div key={index} className="sale__card-color" style={{backgroundColor: color}}></div>)}
   {card.append && <div className="popular__card-append">{card.append}</div>}
   </div>}
   
