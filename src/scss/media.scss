@@ -1,4 +1,7 @@
 @media (max-width: 480px) {
+  .app{
+    overflow-y: hidden;
+  }
   .container {
     padding: 0 27px;
     margin: 0 auto;
@@ -72,6 +75,7 @@
       }
     }
   }
+  
   .novelty__card-test,
   popular__card-test{
     display: block;
@@ -200,6 +204,7 @@
   font-size: 11px;
   line-height: 14px;
   text-align: center;
+ 
 }
 .about-discounts__form {
   display: block;
@@ -221,7 +226,7 @@
   height: 716px;
 }
 .about-discounts__test{
-  padding: 455px 27px;
+  padding: 400px 27px;
 }
 .about-discounts__title,
 .about-discounts__text {
@@ -242,6 +247,7 @@
 .about-us__inner-info__read{
   display: none;
 }
+
 .about-us__inner-image {
   background-image: url(../images/aboutUsAd.png);
   background-position: center;
@@ -306,7 +312,200 @@
 }
 .reviews {
   margin-left: 0px;
+  .slick-slide.slick-active.slick-current{
+    display: flex;
+    justify-content: center;
+  }
 }
+.reviews__result{
+  display: none;
+}
+.reviews__title {
+  font-size: 26px;
+  line-height: 30px;
+}
+.reviews__card {
+  max-width: 330px;
+  margin-top: 16px;
+  margin-right: 0;
+  
+}
+
+.wallpaper {
+  margin-left: 0;
+  
+}
+.wallpaper__image{
+  img{
+    width: 100%;
+  }
+}
+.wallpaper__images{
+  gap: 5px;
+  img{
+    width: 50%;
+    height: 150px;
+  }
+}
+.our-blog{
+  .slick-slide img {
+    height: 228px;
+  }
+  .slick-slide.slick-active.slick-current{
+    margin-bottom: 14px;
+    margin-top: 14px;
+  }
+  .our-blog__image {
+    padding: 0px 5px;
+    height: 736px;
+    .slick-slider.slick-vertical.slick-initialized{
+      .slick-list{
+        height: 493px !important;
+      }
+    }
+  }
+}
+
+.our-blog__slider-data {
+  margin-top: 32px;
+  margin-left: 10px;
+}
+.our-blog__slider-data__date {
+  font-size: 12px;
+  line-height: 16px;
+  margin-bottom: 9px;
+}
+.our-blog__slider-data__title {
+  font-size: 16px;
+  line-height: 20px;
+  margin-bottom: 8px;
+}
+.our-blog__slider-data__text {
+  font-size: 16px;
+  line-height: 21px;
+  margin-bottom: 9px;
+}
+.our-blog__image-title {
+  font-size: 26px;
+  line-height: 30px;
+  padding-top: 42px;
+  padding-bottom: 23px;
+}
+
+.our-blog__btn {
+  margin-top: 26px;
+}
+.our-blog .slick-slider .slick-arrow.slick-prev::before,
+.our-blog .slick-slider .slick-arrow.slick-next::before{
+  display: none;
+}
+.footer__inner {
+  flex-direction: column;
+  padding-left: 27px;
+  padding-right: 27px;
+}
+.footer__contacts {
+  margin-left: 0;
+  order: 1;
+  border-top: 1px solid #74ccd8;
+  border-bottom: 1px solid #74ccd8;
+}
+.footer__main {
+  border: none;
+  margin-left: 0px;
+  padding-left: 0px;
+  order: 0;
+  margin-bottom: 31px;
+}
+.footer__main-wrapper {
+  display: block;
+}
+.footer__link-left,
+.footer__link-right {
+  li {
+    margin-bottom: 0px;
+    a {
+      font-size: 12px;
+      line-height: 17px;
+  }
+}
+}
+.footer__contacts-title {
+  margin-top: 32px;
+  font-size: 16px;
+  line-height: 22px;
+}
+.footer__contacts-wach {
+  margin-bottom: 30px;
+}
+.footer__social-title {
+  margin-top: 32px;
+  margin-bottom: 14px;
+  line-height: 20px;
+  font-size: 16px;
+}
+.footer__link-left,
+.footer__link-right {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin-right: 0px;
+}
+
+.footer__social {
+  margin-left: 0px;
+  order: 1;
+}
+.footer__main-title {
+  font-size: 16px;
+  line-height: 20px;
+  margin-bottom: 26px;
+}
+.footer__contacts-box{
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+.footer__contacts-messengeres {
+  margin-bottom: 7px;
+  margin-left: 18px;
+}
+.footer__social-inner{
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 46px;
+  align-items: center;
+}
+.our-blog__image-scroll {
+    left: 0px;
+    bottom: -30px;
+}
+.our-blog__image-chat{
+  right: 0;
+  bottom: -32px;
+}
+.footer__apps {
+  margin-bottom: 0;
+}
+.reviews .slick-slider .slick-next::before {
+  right: 3px;
+}
+.reviews .slick-slider .slick-prev::before {
+  right: -17px;
+}
+.reviews__card-name {
+  font-size: 12px;
+  line-height: 16px;
+}
+.reviews__card-box {
+  font-size: 10px;
+  line-height: 15px;
+}
+.reviews__card-text {
+  font-size: 13px;
+  line-height: 18px;
+}
+
   .navigate__wrapper-logo {
     display: none;
   }
@@ -349,5 +548,10 @@
     align-items: center;
     width: 100%;
     padding: 15px 0 14px;
+  }
+}
+.footer__bottom{
+  span{
+    display: none;
   }
 }

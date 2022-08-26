@@ -17,6 +17,7 @@ const Footer = () => {
       <div className="footer__inner">
         <div className="footer__contacts">
             <div className="footer__contacts-title">Контакты</div>
+            <div className="footer__contacts-box">
           <div className="footer__contacts-phone">
             <Phone />
             <a href="tel:380974356743">+38 097 435 6743</a>
@@ -24,6 +25,7 @@ const Footer = () => {
           <div className="footer__contacts-messengeres">
             <Whatsup className="footer__contacts-messengeres__whatsup" />
             <Messenger className="footer__contacts-messengeres__messenger" />
+          </div>
           </div>
           <div className="footer__contacts-email">
             <Mail className="footer__contacts-mail"/>
@@ -78,6 +80,7 @@ const Footer = () => {
         </div>
         <div className="footer__social">
             <div className="footer__social-title">Социальные сети</div>
+            <div className="footer__social-inner">
           <div className="footer__apps">
             <Twitter className="footer__apps-twitter" />
             <Instagram className="footer__apps-instagram" />
@@ -87,8 +90,9 @@ const Footer = () => {
           <a href="#"><img src={logo} alt="" className="footer__apps-logo" /></a>
           
         </div>
+        </div>
       </div>
-      <div className="footer__bottom">2011-2022 Все права защищены</div>
+      <div className="footer__bottom"><span>2011-2022</span> Все права защищены</div>
     </div>
   );
 };
